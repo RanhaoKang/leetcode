@@ -1,3 +1,15 @@
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+def linkedlist(l):
+    p = dummy = ListNode(0)
+    for i in l:
+        p.next = ListNode(i)
+        p = p.next
+    return dummy.next
+
 class TreeNode:
     def __init__(self, val, left=None, right=None):
         self.val = val
